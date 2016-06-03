@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/imageView1"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/register_panel"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="3" >
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_strip"
+        android:drawableLeft="@drawable/ic_usernname"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Username"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtEmailId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edt_strip"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edt_strip"
+        android:drawableLeft="@drawable/ic_pwd"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edt_strip"
+        android:drawableLeft="@drawable/ic_pwd"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:src="@drawable/selector_btn_login_page_login"
+        android:text="Sign In" >
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By signing up you accept terms of use and privacy policy"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/headline_sub_data_text_size" />
+
+</LinearLayout>

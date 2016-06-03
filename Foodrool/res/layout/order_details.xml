@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtRestaurantHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:background="@drawable/header_main"
+                android:gravity="center"
+                android:text="Restaurant Details"
+                android:textSize="@dimen/list_text_size" />
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#F5F5F5"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:weightSum="5" >
+
+                <TextView
+                    android:id="@+id/txtOrderNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/from_text"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtRestaurantName"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/from_text"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtRestaurantMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtRestaurantAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="@string/to_text"
+                    android:textSize="@dimen/list_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtCustHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.45"
+                android:background="@drawable/header_main"
+                android:gravity="center"
+                android:text="Customer Details"
+                android:textSize="@dimen/list_text_size" />
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#F5F5F5"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:weightSum="4" >
+
+                <TextView
+                    android:id="@+id/txtCustName"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtCustMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtCustAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:textSize="@dimen/list_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtOrderHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.45"
+                android:background="@drawable/header_main"
+                android:gravity="center"
+                android:text="Order Details"
+                android:textSize="@dimen/list_text_size" />
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#F5F5F5"
+                android:orientation="vertical"
+                android:padding="10dp" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2" >
+
+                <Button
+                    android:id="@+id/btnAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Accept"
+                    android:textSize="@dimen/login_form_header_text_size"
+                    android:background="@drawable/header_main" 
+                    android:layout_marginRight="10dp"/>
+
+                <Button
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Reject"
+                    android:textSize="@dimen/login_form_header_text_size"
+                     android:background="@drawable/header_main" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

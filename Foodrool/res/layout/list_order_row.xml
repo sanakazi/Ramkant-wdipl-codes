@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding" >
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btnArr"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtOrderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_header_size"
+            android:text="@string/order_no_text" 
+            android:textStyle="bold" />"
+
+        <TextView
+            android:id="@+id/txtOrderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textSize="@dimen/list_header_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/btnArr"
+        android:orientation="horizontal"
+        android:layout_below="@+id/llHeader"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/txtFrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:textSize="@dimen/list_text_size"
+            android:text="@string/from_text" 
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.1" />
+
+        <TextView
+            android:id="@+id/txtTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:textSize="@dimen/list_text_size"
+            android:text="@string/to_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/btnArr"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll1"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/txtToName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.45" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.1" />
+
+        <TextView
+            android:id="@+id/txtFromName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.45" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/btnArr"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll2"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/txtFromAddr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.45" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.1" />
+
+        <TextView
+            android:id="@+id/txtToAddr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.45" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/btnArr"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll3"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/txtFromMob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.45" />
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.1" />
+
+        <TextView
+            android:id="@+id/txtToMob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_text_size"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="0.45" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnArr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arr_right" />
+
+</RelativeLayout>

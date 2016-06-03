@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity" >
+
+    <include
+        android:id="@+id/lytHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lytHeader"
+        android:layout_marginLeft="@dimen/signup_lable_margin"
+        android:layout_marginRight="@dimen/signup_lable_margin"
+        android:orientation="vertical" >
+
+        <!-- name layout -->
+
+
+        <!-- gender layout -->
+
+
+        <!-- date of birth layout -->
+
+
+        <!-- username layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_username"
+                android:visibility="gone"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:singleLine="true"
+                android:background="@drawable/edt_strip"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- password layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_password"
+                android:visibility="gone"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:background="@drawable/edt_strip"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- confirm password layout -->
+
+
+        <!-- profile picture layout -->
+
+
+        <!-- email id layout -->
+
+
+        <!-- confirm email id layout -->
+
+
+        <!-- sign up button layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:ems="10"
+                android:text="Sign In"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="Sign Up"
+                android:textSize="@dimen/signup_edt_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

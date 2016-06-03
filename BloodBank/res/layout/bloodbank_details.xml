@@ -1,0 +1,431 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llFooter"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_blood_logo" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:scaleType="fitXY"
+                android:src="@drawable/text_small_save_life" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.02"
+            android:scaleType="fitStart"
+            android:src="@drawable/strip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.70"
+            android:background="#ffffff"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/edt_text_padding"
+                android:text="Bloodbank Details"
+                android:textSize="@dimen/login_form_header_text_size"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/txt_donor_details"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_box_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.35"
+                        android:text="@string/state"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.03"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtStateName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.62"
+                        android:text=""
+                        android:textSize="@dimen/edt_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textDistrict"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.35"
+                        android:text="@string/district"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.03"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtDistrictName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.62"
+                        android:text=""
+                        android:textSize="@dimen/edt_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:gravity="center_vertical"
+                        android:text="Bloodbank Name "
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.03"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.62"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textSize="@dimen/edt_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/textContactName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.35"
+                        android:text="Contact Person "
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.03"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtContactName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.62"
+                        android:text=""
+                        android:textSize="@dimen/edt_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.35"
+                        android:gravity="center_vertical"
+                        android:text="Telephone No "
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.03"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.52"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:weightSum="3" >
+
+                        <TextView
+                            android:id="@+id/txtContactNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/edt_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtContactNo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/edt_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtContactNo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/edt_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.10"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:weightSum="1" >
+
+                        <ImageButton
+                            android:id="@+id/btnCall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_call" />
+
+                        <ImageButton
+                            android:id="@+id/btnCall1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_call" />
+
+                        <ImageButton
+                            android:id="@+id/btnCall2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_call" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:gravity="center_vertical"
+                        android:text="Mobile No "
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.03"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <TextView
+                        android:id="@+id/txtMobileNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.52"
+                        android:text=""
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <ImageButton
+                        android:id="@+id/btnCallMobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.10"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_call" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6" >
+
+            <ImageButton
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/splash_footer_bg" />
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Dial 104 to get blood at doorstep"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_form_text_size" />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/txt"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:src="@drawable/phone_icon" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/txt"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:src="@drawable/help_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/footer_bottm_bg"
+            android:gravity="center"
+             android:text="@string/powered_by"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/message_text_size" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

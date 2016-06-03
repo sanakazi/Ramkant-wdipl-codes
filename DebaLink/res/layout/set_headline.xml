@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_menu_grey_part"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp" >
+
+        <EditText
+            android:id="@+id/edtPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_menu_white_part"
+            android:layout_centerInParent="true"
+            android:lines="4"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="top|left"
+            android:textColor="#9d1214"
+            android:ems="10" >
+        </EditText>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_btn_post" />
+
+</LinearLayout>

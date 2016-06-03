@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/btnCompose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_btn_dashboard_blank"
+            android:drawableLeft="@drawable/selector_ic_compose"
+            android:drawablePadding="5dp"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text=" Compose"
+            android:textColor="@drawable/selector_dashboard_color"
+            android:textSize="@dimen/headline_sub_data_text_size" />
+
+        <Button
+            android:id="@+id/btnInbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_btn_dashboard_blank"
+            android:drawableLeft="@drawable/selector_ic_inbox"
+            android:drawablePadding="5dp"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="  Inbox"
+            android:textColor="@drawable/selector_dashboard_color"
+            android:textSize="@dimen/headline_sub_data_text_size" />
+
+        <Button
+            android:id="@+id/btnOutbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_btn_dashboard_blank"
+            android:drawableLeft="@drawable/selector_ic_outbox"
+            android:drawablePadding="5dp"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text=" Outbox"
+            android:textColor="@drawable/selector_dashboard_color"
+            android:textSize="@dimen/headline_sub_data_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll" >
+    </RelativeLayout>
+
+</RelativeLayout>

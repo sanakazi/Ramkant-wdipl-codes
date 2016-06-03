@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/bg_transparnt"
+        android:visibility="visible"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/deba_logo"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <!-- first layout -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/register_panel"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:weightSum="3" >
+
+            <ImageButton
+                android:id="@+id/btnFbSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edtName"
+                android:layout_alignRight="@+id/edtName"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:src="@drawable/selector_btn_fb_sign_up"
+                android:text="Sign In" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnFbSignUp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_register"
+                android:drawableLeft="@drawable/ic_usernname"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Name"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/llHor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edtName"
+                android:layout_alignRight="@+id/edtName"
+                android:layout_below="@+id/edtName"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <com.debalink.customviews.CustomEditText
+                    android:id="@+id/edtDob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtGender"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_gender"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/calender"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Birthday"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </com.debalink.customviews.CustomEditText>
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtGender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_gender"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Select Gender"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </AutoCompleteTextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llHor"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_register"
+                android:drawableLeft="@drawable/ic_usernname"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Username"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtUsername"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_register"
+                android:drawableLeft="@drawable/ic_pwd"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtEmailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtPassword"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_register"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtConfirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtEmailId"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_register"
+                android:drawableLeft="@drawable/ic_pwd"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize"
+                android:visibility="gone" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtEmailId"
+                android:text="By signing up you accept terms of use and privacy policy"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edtEmailId"
+                android:layout_alignRight="@+id/edtEmailId"
+                android:layout_below="@+id/textView1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="By signing up you accept terms of use and privacy policy"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTerms"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1" >
+
+                <ImageButton
+                    android:id="@+id/btnNext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:src="@drawable/btn_post"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnNext1"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:src="@drawable/selector_btn_sign_reg"
+                    android:text="Sign In" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--
+             <include
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            layout="@layout/register_page_second" />
+        -->
+    </ViewSwitcher>
+
+</RelativeLayout>

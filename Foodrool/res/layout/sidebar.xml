@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="0px"
+        android:background="@drawable/bg_sidebar"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+          
+            <Button
+                android:id="@+id/btnRequestedOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/btn_fovourites"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/text_menu_requested_orders"
+                android:textColor="@drawable/selector_btn_menu_color"
+                android:drawableLeft="@drawable/ic_requested_orders"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <Button
+                android:id="@+id/btnMyOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/btnRequestedOrders"
+                android:layout_below="@+id/btnRequestedOrders"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/btn_fovourites"
+                android:drawableLeft="@drawable/ic_my_orders"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/text_menu_my_orders"
+                android:textColor="@drawable/selector_btn_menu_color"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/btnMyOrders"
+                android:layout_below="@+id/btnMyOrders"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/btn_fovourites"
+                android:drawableLeft="@drawable/ic_logout"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:text="@string/text_menu_logout"
+                android:textColor="@drawable/selector_btn_menu_color"
+                android:textSize="@dimen/menu_button_text_size" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--
+         <TextView
+        android:id="@+id/textView1"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:text="" />
+    -->
+
+</LinearLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/imageButton1"
+        android:background="@android:color/white"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/txtDiscussionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txtAvgRating"
+                android:text="test"
+                android:textSize="@dimen/headline_row_subtext_text_size" />
+
+            <TextView
+                android:id="@+id/txtAvgRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="test"
+                android:textSize="@dimen/publication_row_comment_text_size"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl1"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imgDiscussionPic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher" />
+
+                <LinearLayout
+                    android:id="@+id/discussion_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txtPollHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Share your opinion"
+                        android:textSize="@dimen/headline_row_date_text_size"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDiscussionDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textSize="@dimen/headline_row_date_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/discussion_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6" >
+
+          
+            <TextView
+                android:id="@+id/txtComments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+               android:gravity="center"
+                android:text="Comment" />
+
+            <TextView
+                android:id="@+id/txtReport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Report" />
+
+            <TextView
+                android:id="@+id/txtRatings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rate"
+               android:gravity="center"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtSharing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+               
+                android:text="Share" />
+            
+            <TextView
+                android:id="@+id/txtView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+              
+                android:text="View" />
+            <TextView
+                android:id="@+id/txtDownload"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+               
+                android:text="Download" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/discussion_tags"
+            android:layout_marginTop="5dp" >
+
+            <LinearLayout
+                android:id="@+id/llArrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:weightSum="6" >
+
+               
+
+                <ImageButton
+                    android:id="@+id/btnComments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_down_arrow"
+                    android:text="Comment"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/btnReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_down_arrow"
+                    android:visibility="invisible" />
+
+                <ImageButton
+                    android:id="@+id/btnRatings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_down_arrow"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/btnSharing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_down_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/layoutRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llArrow"
+                android:layout_centerHorizontal="true"
+                layout="@layout/rating_layout" />
+
+            <RelativeLayout
+                android:id="@+id/rlComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/llArrow"
+                android:background="#e6e6e6"
+                android:padding="5dp"
+                android:visibility="invisible" >
+
+                <ListView
+                    android:id="@+id/lvComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:headerDividersEnabled="false"
+                    android:padding="5dp" >
+                </ListView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

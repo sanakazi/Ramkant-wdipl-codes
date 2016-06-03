@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="160dp"
+    android:orientation="horizontal" 
+    android:padding="10dp"
+    android:background="@drawable/listbg">
+    <ImageButton 
+        android:id="@+id/imgCall"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/call"/>
+    
+    <ImageButton 
+        android:id="@+id/imgSms"
+        android:layout_marginLeft="15dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/sms"
+       />
+    
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DebaLink</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="txt_name">Name</string>
+	<string name="txt_date_of_birth">Date Of Birth</string>
+	<string name="txt_gender">Gender</string>
+	<string name="txt_username">Username</string>
+	<string name="txt_password">Password</string>
+	<string name="txt_confirm_password">Confirm Password</string>
+	<string name="txt_profile_pic">Profile Picture</string>
+	<string name="txt_emailid">Email Id</string>
+	<string name="txt_confirm_emailid">Confirm Email Id</string>
+	<string name="txt_male">Male</string>
+	<string name="txt_female">Female</string>
+	<string name="txt_sign_up_header">Sign Up</string>
+	<string name="txt_unspecified">Unspecified</string>
+	<string name="splash_screen_heading"><![CDATA[<p>Find and share stories, ideas and opportunities with <b>Debalink</b></p>]]></string>
+</resources>

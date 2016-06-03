@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:weightSum="10" >
+
+    <com.debalink.customviews.CustomEditText
+        android:id="@+id/editText1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:background="@drawable/search"
+        android:drawableRight="@drawable/ic_search_new"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp" >
+    </com.debalink.customviews.CustomEditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Search"
+        android:visibility="gone" />
+
+</LinearLayout>

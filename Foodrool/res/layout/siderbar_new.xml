@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_sidebar"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#C6DDCB" >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_top_home"
+                    android:gravity="left|center_vertical"
+                    android:src="@drawable/siderbar_logo"
+                    android:textSize="@dimen/menu_button_text_size" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rl4"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:src="@drawable/btn_home"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <ImageButton
+                android:id="@+id/btnRequestedOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btnHome"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:src="@drawable/btn_requested_orders"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <ImageButton
+                android:id="@+id/btnMyOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/btnRequestedOrders"
+                android:layout_below="@+id/btnRequestedOrders"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:src="@drawable/btn_my_orders"
+                android:textColor="@drawable/selector_btn_menu_color"
+                android:textSize="@dimen/menu_button_text_size" />
+            
+            <ImageButton
+                android:id="@+id/btnOrderHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/btnRequestedOrders"
+                android:layout_below="@+id/btnMyOrders"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:src="@drawable/btn_order_history"
+                android:textColor="@drawable/selector_btn_menu_color"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <ImageButton
+                android:id="@+id/btnContactAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/btnMyOrders"
+                android:layout_below="@+id/btnOrderHistory"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:src="@drawable/btn_contact_admin"
+                android:textColor="@drawable/selector_btn_menu_color"
+                android:textSize="@dimen/menu_button_text_size" />
+
+            <ImageButton
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/btnContactAdmin"
+                android:layout_below="@+id/btnContactAdmin"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:src="@drawable/btn_logout"
+                android:textColor="@drawable/selector_btn_menu_color"
+                android:textSize="@dimen/menu_button_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

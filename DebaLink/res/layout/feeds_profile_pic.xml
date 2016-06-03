@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/imgProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="android"
+                android:textColor="#9d1214"
+                android:textSize="@dimen/headline_row_name_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtHeadlineDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#010101"
+            android:lines="1"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+        
+        <TextView
+            android:id="@+id/txtHeadlineDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#010101"
+            android:lines="1"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+
+        <ImageView
+            android:id="@+id/imgDisplayPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+</LinearLayout>

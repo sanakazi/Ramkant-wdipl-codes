@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/imageView1"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/register_panel"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="3" >
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_register"
+        android:drawableLeft="@drawable/ic_usernname"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Name"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </EditText>
+
+    <AutoCompleteTextView
+        android:id="@+id/edtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtName"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edt_register"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_gender"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="Gender"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </AutoCompleteTextView>
+
+    <com.debalink.customviews.CustomEditText
+        android:id="@+id/edtDob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtGender"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edt_register"
+        android:drawableLeft="@drawable/ic_calender"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/calender"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="Birthday"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </com.debalink.customviews.CustomEditText>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtDob"
+        android:layout_alignRight="@+id/edtDob"
+        android:layout_below="@+id/edtDob"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:weightSum="1" >
+
+        <EditText
+            android:id="@+id/txtProfilePicture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/txtprof"
+            android:drawableLeft="@drawable/ic_profilepic"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Profile Pic"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/signup_edt_textsize" />
+
+        <ImageView
+            android:id="@+id/imgProfilePicture"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.18"
+            android:adjustViewBounds="true"
+            android:background="@drawable/btn_profile"
+            android:ems="10"
+            android:maxWidth="@dimen/signup_profile_pic_size"
+            android:textSize="@dimen/signup_edt_textsize" >
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/btnProfilePicture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text"
+            android:scaleType="fitEnd"
+            
+            android:src="@drawable/ic_gallery" />
+
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.15"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_camera" >
+        </ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtDob"
+        android:layout_alignRight="@+id/edtDob"
+        android:layout_below="@+id/ll"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:weightSum="1" >
+
+        <ImageButton
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:src="@drawable/selector_btn_prev"
+            android:text="Sign In" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:src="@drawable/selector_btn_sign_reg"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="By signing up you accept terms of use and privacy policy"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+</RelativeLayout>

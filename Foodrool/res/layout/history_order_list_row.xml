@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/txttriangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txttop"
+        android:background="@drawable/orderdetails_right" />
+
+    <TextView
+        android:id="@+id/txttop"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txttriangle"
+        android:background="#DEDEDE" />
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txttop"
+        android:layout_toRightOf="@+id/txttriangle"
+        android:background="#DEDEDE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/llHeader1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/orderdetail_heading_n"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" >
+
+            <TextView
+                android:id="@+id/txtOrderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_no_text"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:id="@+id/txtOrderNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_text_size" />
+
+            <CheckBox
+                android:id="@+id/chkIsCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_text_size"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llHeader"
+        android:layout_toRightOf="@+id/txttriangle"
+        android:background="@drawable/orderlist_mainx"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/btnArr"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtOrderDateT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:text="Order Date : "
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:id="@+id/txtOrderDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:textSize="@dimen/list_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll1"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/btnArr"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtDeliveryDateT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="Delivery Date : "
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:id="@+id/txtDeliveryDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll2"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/btnArr"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtDeliveryCharges1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="Delivery Charges :"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:id="@+id/txtDeliveryCharges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll3"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/btnArr"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtCustomerNameT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="Customer Name :"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:id="@+id/txtCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll4"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/btnArr"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtRestaurantNameT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="Restaurant Name :"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:id="@+id/txtRestaurantName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll7"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/btnArr"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtPaymentMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/list_text_size" />
+
+            <TextView
+                android:id="@+id/txtInstructino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:ellipsize="end"
+                android:lines="1"
+                android:visibility="gone"
+                android:textSize="@dimen/list_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll5"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/btnArr"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/btnViewAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_forgot"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                android:text="View"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_form_text_size" />
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.48"
+                android:background="@drawable/btn_forgot"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                android:text="View"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_form_text_size" />
+
+            <Button
+                android:id="@+id/btnSpace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:background="@android:color/transparent"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btnUpdateStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.48"
+                android:background="@drawable/btn_forgot"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                android:text="Update Status"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_form_text_size" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnArr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/arr_right"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

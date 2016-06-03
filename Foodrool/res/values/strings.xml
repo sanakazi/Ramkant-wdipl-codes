@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Foodrool Rider App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="text_hint_username">Username</string>
+    <string name="text_hint_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="text_btn_login">Login</string>
+    <string name="text_menu_requested_orders">Requested Orders</string>
+    <string name="text_menu_my_orders">My Orders</string>
+    <string name="text_menu_logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Submit</string>
+    <string name="enter_email_id">Enter Email Id</string>
+    <string name="order_no_text">Order No : </string>
+    <string name="restaurant_details">Restaurant Details</string>
+    <string name="from_text">From</string>
+    <string name="to_text">To</string>
+
+</resources>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e6e6e6"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1" >
+
+                <ImageView
+                    android:id="@+id/imgPicUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.18"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/img_upload"
+                    android:ems="10"
+                    android:maxWidth="@dimen/signup_profile_pic_size"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </ImageView>
+
+                <ImageButton
+                    android:id="@+id/btnPicUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.35"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/img_display" />
+
+                <TextView
+                    android:id="@+id/txtPicUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.45"
+                    android:gravity="center_vertical|left"
+                    android:lines="4"
+                    android:text="Your image must be Jpg,Gif or PNG format and not exceed 1MB.It will be resized to make its width 225px"
+                    android:textSize="@dimen/headline_row_date_text_size" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/publication_txtbox"
+                android:ems="10"
+                android:hint="Enter Title"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTitle"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/publication_txtbox"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Enter Description"
+                android:lines="5"
+                android:padding="10dp"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/llUploadDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtDescription"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:weightSum="1" >
+
+                <ImageView
+                    android:id="@+id/imgFileUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.18"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/file_upload"
+                    android:ems="10"
+                    android:maxWidth="@dimen/signup_profile_pic_size"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </ImageView>
+
+                <ImageButton
+                    android:id="@+id/btnFileUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.35"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/file_display" />
+
+                <TextView
+                    android:id="@+id/txtFileUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.45"
+                    android:gravity="center_vertical|left"
+                    android:lines="4"
+                    android:text="No file Selected"
+                    android:textSize="@dimen/headline_row_date_text_size" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtVideoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llUploadDoc"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/publication_txtbox"
+                android:ems="10"
+                android:hint="Video Title"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtVideoUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtVideoTitle"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/publication_txtbox"
+                android:ems="10"
+                android:hint="Video URL"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <AutoCompleteTextView
+                android:id="@+id/edtCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtVideoUrl"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/publication_txtbox"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Category"
+                android:padding="10dp"
+                android:drawableRight="@drawable/ic_arrow"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </AutoCompleteTextView>
+
+            <AutoCompleteTextView
+                android:id="@+id/edtIsAccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtCategory"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/publication_txtbox"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Is Access"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:singleLine="true"
+                android:text="Public"
+                android:drawableRight="@drawable/ic_arrow"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </AutoCompleteTextView>
+
+            <com.debalink.customviews.CustomEditText
+                android:id="@+id/edtStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtIsAccess"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_register"
+                android:drawableRight="@drawable/calender"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Start Date"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:visibility="visible"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </com.debalink.customviews.CustomEditText>
+
+            <com.debalink.customviews.CustomEditText
+                android:id="@+id/edtEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtStartDate"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_register"
+                android:visibility="visible"
+                android:drawableRight="@drawable/calender"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="End Date"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </com.debalink.customviews.CustomEditText>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtEndDate"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:weightSum="1" >
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/password_textbox"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:gravity="center_vertical|left"
+                    android:lines="3"
+                    android:padding="10dp"
+                    android:text="Specify a password to lock publications to only users who has the password (Optional)."
+                    android:textSize="@dimen/headline_row_date_text_size" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/llSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <ImageButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_submit"
+                    android:textSize="@dimen/signup_header_size" />
+
+                <ImageButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_cancel_message"
+                    android:textSize="@dimen/signup_header_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

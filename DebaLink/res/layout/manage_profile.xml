@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/white"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtProfilePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Picture"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e6e6e6"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/imgProfilePic"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:background="@android:color/white"
+                    android:src="@drawable/ic_launcher" />
+
+                <ImageButton
+                    android:id="@+id/btnUploadProfilePic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imgProfilePic"
+                    android:layout_alignRight="@+id/imgProfilePic"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_upload_profile_pic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/txtBiography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Biography"
+                    android:textSize="@dimen/signup_edt_textsize" />
+
+                <ImageButton
+                    android:id="@+id/btnEditBiography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_edit" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="#e0e0e0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible" >
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_register"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Name"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </EditText>
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtName"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edt_register"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Gender"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </AutoCompleteTextView>
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edt_register"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Country"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </AutoCompleteTextView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Account"
+                    android:textSize="@dimen/signup_edt_textsize" />
+
+                <ImageButton
+                    android:id="@+id/btnEditAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_edit" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="#e0e0e0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_register"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtName"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edt_register"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edtRetypePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edt_register"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </EditText>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Location"
+                    android:textSize="@dimen/signup_edt_textsize" />
+
+                <ImageButton
+                    android:id="@+id/btnEditLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_edit" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="#e0e0e0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <EditText
+                    android:id="@+id/edtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_register"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Location"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/btnAutoDetectLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_autodetect"
+                    android:textSize="@dimen/signup_edt_textsize" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtProfileUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Profile URL"
+                    android:textSize="@dimen/signup_edt_textsize" />
+
+                <ImageButton
+                    android:id="@+id/btnEditProfileUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_edit" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="#e0e0e0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <EditText
+                    android:id="@+id/edtProfileUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_register"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Profile URL"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </EditText>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtPrivacySetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Privacy Settings"
+                    android:textSize="@dimen/signup_edt_textsize" />
+
+                <ImageButton
+                    android:id="@+id/btnEditPrivacySetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_edit" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="#e0e0e0"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/txtProfileSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Profile Setting"
+                    android:textSize="@dimen/signup_edt_textsize" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtProfileSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtName"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edt_register"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Private"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </AutoCompleteTextView>
+
+                <TextView
+                    android:id="@+id/txtDownloadSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                 
+                    android:text="Allow to download files"
+                    android:textSize="@dimen/signup_edt_textsize" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtDownloadSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edt_register"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Allow"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/signup_edt_textsize" >
+                </AutoCompleteTextView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#e0e0e0"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <ImageButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/btnSave"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_edit_profile_cancel" />
+
+                <ImageButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/selector_btn_save" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

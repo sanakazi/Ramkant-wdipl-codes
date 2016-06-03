@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/side_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="#e6e6e6"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/set_headline"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/recommandedLayout"
+            layout="@layout/header_recommended"
+            android:visibility="gone" />
+        
+        <include
+            android:id="@+id/pinnedSafeLayout"
+            layout="@layout/header_pinsafe"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/strip3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:src="@drawable/headline_line" />
+
+    <RelativeLayout
+        android:id="@+id/inner_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/strip3" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+          android:weightSum="3"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnHeadlines"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_btn_dashboard_blank_left"
+                android:padding="10dp"
+                android:text="My Headlines"
+                android:textColor="@drawable/selector_dashboard_color"
+                android:layout_weight="0.95"
+                android:layout_marginRight="2dp"
+                android:textSize="@dimen/headline_sub_data_text_size" />
+
+            <Button
+                android:id="@+id/btnPublications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_btn_dashboard_blank"
+                android:padding="10dp"
+                android:text="My Publications"
+                android:layout_weight="1.05"
+                android:textColor="@drawable/selector_dashboard_color"
+                android:textSize="@dimen/headline_sub_data_text_size" />
+
+            <Button
+                android:id="@+id/btnDescussion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_btn_dashboard_right"
+                android:padding="10dp"
+                android:text="My Discussion"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:textColor="@drawable/selector_dashboard_color"
+                android:textSize="@dimen/headline_sub_data_text_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linearLayout1" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wdipl.bloodbank"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.wdipl.bloodbank.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.wdipl.bloodbank.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.wdipl.bloodbank.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.MainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.DonorList"
+            android:label="@string/title_activity_donor_list"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.MessageActivity"
+            android:label="@string/msg"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.LoginActivity"
+            android:label="@string/msg"
+            android:screenOrientation="sensorPortrait"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.FavouritesActivity"
+            android:label="@string/msg"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.NotificationsActivity"
+            android:label="@string/msg"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.ProfileActivity"
+            android:label="@string/msg"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.BloodBankListActivity"
+            android:label="@string/msg"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.wdipl.bloodbank.BloodbankDetails"
+            android:label="@string/msg"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <receiver
+            android:name="com.wdipl.bloodbank.notification.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.wdipl.bloodbank" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.wdipl.bloodbank.notification.GCMIntentService" />
+    </application>
+
+</manifest>

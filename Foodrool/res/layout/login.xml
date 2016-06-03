@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_bg"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/login_small_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="7dp" >
+
+        <TextView
+            android:id="@+id/txtLoginTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:text="LOGIN INTO THE RIDER APP" 
+            android:textSize="@dimen/login_form_header_text_size"/>
+
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_button_margin"
+            android:background="@drawable/edittext"
+            android:hint="@string/text_hint_username"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="@dimen/padding"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_form_text_size" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtUsername"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="@string/text_hint_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="@dimen/padding"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_form_text_size" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtPassword"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_login"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="1dp"
+            android:text="@string/text_btn_login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_form_header_text_size" />
+
+        <TextView
+            android:id="@+id/txtForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:padding="@dimen/padding"
+            android:text="@string/forgot_password"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_form_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

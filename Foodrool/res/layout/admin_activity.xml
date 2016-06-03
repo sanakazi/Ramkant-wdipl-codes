@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/txttriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txttop"
+            android:background="@drawable/orderdetails_right" />
+
+        <TextView
+            android:id="@+id/txttop"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txttriangle"
+            android:background="#DEDEDE" />
+
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txttop"
+            android:layout_toRightOf="@+id/txttriangle"
+            android:background="#DEDEDE"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/llHeader1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/orderdetail_heading_n"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp" >
+
+                <TextView
+                    android:id="@+id/txtRestaurantDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Admin"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtRestaurantDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/list_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llHeader"
+            android:layout_toRightOf="@+id/txttriangle"
+            android:background="@drawable/orderlist_mainx"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:weightSum="4" >
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnArr"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/txtContact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:text="Name :"
+                    android:textSize="@dimen/list_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtContactName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:textSize="@dimen/list_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/ll2"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnArr"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/txtAdminM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:drawableLeft="@drawable/ic_call"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtContactNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/ll1"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnArr"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/txtContactN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Name :"
+                    android:textSize="@dimen/list_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtContactName2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMob2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/llMob"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnArr"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/txtM2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:drawableLeft="@drawable/ic_call"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+
+                <TextView
+                    android:id="@+id/txtContactNo2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textSize="@dimen/list_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:gravity="right"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <AutoCompleteTextView
+        android:id="@+id/edtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:background="@drawable/edt_gender"
+        android:drawableRight="@drawable/ic_arrow"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignParentRight="true"
+        android:hint="Category"
+        android:text="All"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/signup_edt_textsize" >
+    </AutoCompleteTextView>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edtCategory"
+        android:divider="@drawable/list_divider" >
+    </ListView>
+
+</RelativeLayout>

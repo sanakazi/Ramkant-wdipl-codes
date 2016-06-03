@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            
+            <Button
+                android:id="@+id/btnSetCurrentOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_login"
+                
+                android:text="Set As Current Order"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_form_header_text_size"
+                android:visibility="visible" />
+            
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/txttriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txttop"
+                    android:background="@drawable/orderdetails_right" />
+
+                <TextView
+                    android:id="@+id/txttop"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/txttriangle"
+                    android:background="#DEDEDE" />
+
+                <LinearLayout
+                    android:id="@+id/llHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txttop"
+                    android:layout_toRightOf="@+id/txttriangle"
+                    android:background="#DEDEDE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/llHeader1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orderdetail_heading_n"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp" >
+
+                        <TextView
+                            android:id="@+id/txtRestaurantDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/restaurant_details"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtRestaurantDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llHeader"
+                    android:layout_toRightOf="@+id/txttriangle"
+                    android:background="@drawable/orderlist_mainx"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:weightSum="4" >
+
+                    <LinearLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtOrder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text="Order No :"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtOrderNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtRestaurant"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="Restaurant Name :"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtRestaurantName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtRestaurantAd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="Restaurant Address :"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtRestaurantAddr"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtRestaurantM"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:drawableLeft="@drawable/ic_call"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtRestaurantMob"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtRestaurantM1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:drawableLeft="@drawable/ic_call"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtRestaurantMob1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:id="@+id/llMob2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/llMob"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtRestaurantM2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:drawableLeft="@drawable/ic_call"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtRestaurantMob2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/txttriangle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txttop2"
+                    android:background="@drawable/orderdetails_right" />
+
+                <TextView
+                    android:id="@+id/txttop2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/txttriangle2"
+                    android:background="#DEDEDE" />
+
+                <LinearLayout
+                    android:id="@+id/llHeader2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txttop2"
+                    android:layout_toRightOf="@+id/txttriangle2"
+                    android:background="#DEDEDE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/llHeader3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orderdetail_heading_n"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp" >
+
+                        <TextView
+                            android:id="@+id/txtCustDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Details"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtCustDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llHeader2"
+                    android:layout_toRightOf="@+id/txttriangle2"
+                    android:background="@drawable/orderlist_mainx"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:weightSum="4" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtCustNames"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text="Customer Name :"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtCustName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtCustAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="Customer Address :"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtCustAddr"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtPayment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="Payment Mode :"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtPaymentMode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtInst"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="Amount :"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtInstruction"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/ll1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtCustMobNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:drawableLeft="@drawable/ic_call"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtCustMob"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/txttriangle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txttop3"
+                    android:background="@drawable/orderdetails_right" />
+
+                <TextView
+                    android:id="@+id/txttop3"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/txttriangle3"
+                    android:background="#DEDEDE" />
+
+                <LinearLayout
+                    android:id="@+id/llHeader5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txttop3"
+                    android:layout_toRightOf="@+id/txttriangle3"
+                    android:background="#DEDEDE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/llHeader4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orderdetail_heading_n"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp" >
+
+                        <TextView
+                            android:id="@+id/txtOrderDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Order Details"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtOrderDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/list_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llHeader5"
+                    android:layout_toRightOf="@+id/txttriangle3"
+                    android:background="@drawable/orderlist_mainx"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:weightSum="4" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/btnArr"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/txtItemNameHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text="Item"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textSize="@dimen/list_text_size" />
+
+                        <TextView
+                            android:id="@+id/txtQuantityHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text="Quantity"
+                            android:textSize="@dimen/list_text_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnOrderStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_login"
+                
+                android:text="Accept"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_form_header_text_size"
+                android:visibility="visible" />
+            
+            <Button
+                android:id="@+id/btnGetDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_login"
+                
+                android:text="Get Direction"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_form_header_text_size"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <Button
+                    android:id="@+id/btnAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_login"
+                    android:gravity="center"
+                    android:text="Accept"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_form_header_text_size" />
+
+                <Button
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_login"
+                    android:gravity="center"
+                    android:text="Reject"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/login_form_header_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Blood Bank</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="search_title">Find A Blood Donor</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="state">State</string>
+    <string name="district">District</string>
+    <string name="city">City</string>
+    <string name="search">Search</string>
+    <string name="register">Register</string>
+    <string name="msg">Message</string>
+    <string name="form_title">Registration form</string>
+    <string name="personal_detail">Personal Information</string>
+    <string name="name">Full Name</string>
+    <string name="gender">Gender</string>
+    <string name="dob">Date of Birth</string>
+    <string name="date">mm/dd/yyyy</string>
+    <string name="setd">Set Date</string>
+    <string name="contact_detail">Contact Information</string>
+    <string name="mobile">Mobile no</string>
+    <string name="country">Country</string>
+    <string name="street">Street</string>
+    <string name="pincode">Pincode</string>
+    <string name="cancel">Cancel</string>
+    <string name="bloodbank_phone_no">104</string>
+    <string name="bloodbank_help">Citizens needing blood simply have to dial <b>104</b> and place a request.
+ A citizen will be charged <b>Rs 450</b> per bottle for a minimum distance of <b>10 km</b> with an additional transport charge of <b>Rs 50</b> and  <b>Rs 100</b> for <b>11–40 km</b>.
+ The health department has pledged to deliver blood within an hour.</string>
+    <string name="my_profile">My Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="bloodbank_list">Blood Bank List</string>
+    <string name="logout">Logout</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="select_blood_group">Select Blood Group</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="accept_tac">Accept terms and conditions</string>
+    <string name="country_name">India</string>
+    <string name="favourites">Favourites</string>
+    <string name="status">Status</string>
+    
+    <string name="powered_by">Powered By WDI</string>
+
+    <string-array name="blood_groups">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Not Specified</item>
+    </string-array>
+    <string-array name="state">
+        <item>All</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand	</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur	</item>
+        <item>Meghalaya</item>
+        <item>Mizoram	</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura	</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+        <item>Andaman and Nicobar</item>
+        <item>Chandigarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Lakshadweep</item>
+        <item>Delhi	</item>
+        <item>Puducherry</item>
+    </string-array>
+
+    <string name="title_activity_donor_list">Donor List</string>
+    <string name="title_activity_register">Registration</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="gcm_registered">From GCM: device successfully registered (regId = %1$s)!</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">From GCM: you got message!</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="gcm_sender_id">694951481226</string>
+
+</resources>

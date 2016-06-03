@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/txtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/headline_sub_data_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/txtAddedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+
+        <TextView
+            android:id="@+id/txtAddedByName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:textColor="#9d1214"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtSeeMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#1a6ad0"
+        android:visibility="gone"
+        android:textSize="@dimen/headline_row_subtext_text_size" />
+
+</LinearLayout>

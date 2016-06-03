@@ -1,0 +1,410 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:weightSum="1" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_blood_logo" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitStart"
+                android:src="@drawable/text_small_save_life" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/strip" />
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:padding="@dimen/edt_text_padding"
+            android:text="Register"
+            android:textSize="@dimen/login_form_header_text_size"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <EditText
+                            android:id="@+id/edtFirstName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.98"
+                            android:background="@drawable/small_text_bx"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/first_name"
+                            android:inputType="textCapSentences"
+                            android:nextFocusDown="@+id/edtLastName"
+                            android:padding="@dimen/edt_text_padding"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textSize="@dimen/edt_text_size" >
+                        </EditText>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.04" >
+                        </View>
+
+                        <EditText
+                            android:id="@+id/edtLastName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.98"
+                            android:background="@drawable/small_text_bx"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/last_name"
+                            android:inputType="textCapSentences"
+                            android:lines="1"
+                            android:nextFocusDown="@+id/edtMobile"
+                            android:padding="@dimen/edt_text_padding"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textSize="@dimen/edt_text_size" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spnBloodGroup"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.98"
+                            android:background="@drawable/small_text_bx"
+                            android:drawableRight="@drawable/down_arrow"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="@string/select_blood_group"
+                            android:padding="@dimen/edt_text_padding"
+                            android:textSize="@dimen/edt_text_size" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.04" >
+                        </View>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spnGender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.98"
+                            android:background="@drawable/small_text_bx"
+                            android:drawableRight="@drawable/down_arrow"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="@string/select_gender"
+                            android:padding="@dimen/edt_text_padding"
+                            android:textSize="@dimen/edt_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.98"
+                            android:padding="@dimen/edt_text_padding"
+                            android:text="@string/dob"
+                            android:textSize="@dimen/edt_text_size" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.04" >
+                        </View>
+
+                        <TextView
+                            android:id="@+id/txtDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.98"
+                            android:background="@drawable/small_text_bx"
+                            android:gravity="center_vertical"
+                            android:hint="@string/date"
+                            android:padding="@dimen/edt_text_padding"
+                            android:textSize="@dimen/edt_text_size" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:hint="@string/mobile"
+                        android:inputType="phone"
+                        android:maxLength="13"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <EditText
+                        android:id="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:hint="@string/email_id"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <EditText
+                        android:id="@+id/edtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:hint="@string/password"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <EditText
+                        android:id="@+id/edtRetypePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:hint="Retype Password"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edtState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/state"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edtDistrict"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/district"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <EditText
+                        android:id="@+id/edtCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/city"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <EditText
+                        android:id="@+id/edtStreet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 _ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/street"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <EditText
+                        android:id="@+id/edtPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/pincode"
+                        android:maxLength="8"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <EditText
+                        android:id="@+id/edtCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/text_input"
+                        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 _ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/country"
+                        android:maxLines="1"
+                        android:padding="@dimen/edt_text_padding"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/country_name"
+                        android:textSize="@dimen/edt_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            android:id="@+id/chkText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_checkbox"
+                            android:button="@null"
+                            android:checked="false"
+                            android:textSize="@dimen/edt_text_size" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/edt_text_padding"
+                            android:text="@string/accept_tac"
+                            android:textSize="@dimen/edt_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/btnRegister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/btn_register_submit" />
+
+                        <ImageButton
+                            android:id="@+id/btnCancel"
+                            style="?android:attr/textAppearanceButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/cancel"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

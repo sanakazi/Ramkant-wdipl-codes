@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.debalink"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <activity
+            android:name="com.debalink.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.debalink.LoginActivity" >
+        </activity>
+        <activity
+            android:name="com.debalink.HomeActivity"
+            android:theme="@style/Theme.Custom"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.debalink.RegisterActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.debalink.slidemenu.MenuActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.debalink.GlobalSearchActivity"
+            android:theme="@style/Theme.Custom"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+        <receiver android:name="com.debalink.services.OnAlarmReceiver" >
+        </receiver>
+        <receiver android:name="com.debalink.services.OnBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.debalink.services.CountService" >
+            <intent-filter>
+                <action android:name="com.textor.trackme.START_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.janrain.android.engage.ui.JRFragmentHostActivity"
+            android:configChanges="orientation|screenSize"
+           android:theme="@style/Theme.AppCompat.Light.DialogWhenLarge"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.janrain.android.engage.ui.JRFragmentHostActivity$Fullscreen"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+    </application>
+
+</manifest>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+       
+        android:weightSum="10" >
+        
+        <TextView
+            
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            
+            android:layout_weight="0.05"
+            android:background="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+
+        <CheckBox
+            android:id="@+id/ckbSelect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="0.50" />
+        <TextView
+            
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            
+            android:layout_weight="0.05"
+            android:background="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+
+        <TextView
+            android:id="@+id/txtTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:layout_weight="1.25"
+            android:textColor="@android:color/black"
+            android:paddingLeft="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            
+            android:layout_weight="0.05"
+            android:background="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:layout_weight="3.2"
+            android:textColor="@android:color/black"
+            android:paddingLeft="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            
+            android:layout_weight="0.05"
+            android:background="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+
+        <TextView
+            android:id="@+id/txtSubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:layout_weight="3.35"
+            android:textColor="@android:color/black"
+            android:paddingLeft="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+        
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.45"
+            style="?android:attr/buttonStyleSmall"
+            android:text="View" />
+        <TextView
+            
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            
+            android:layout_weight="0.05"
+            android:background="@android:color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    </LinearLayout>
+</LinearLayout>

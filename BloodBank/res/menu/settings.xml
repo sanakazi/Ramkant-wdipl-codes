@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/profile"
+        android:title="@string/my_profile"/>
+    <item
+        android:id="@+id/favourites"
+        android:title="@string/favourites"/>
+    <item
+        android:id="@+id/notifications"
+        android:title="@string/notifications"/>
+    <item
+        android:id="@+id/bloodbank_list"
+        android:title="@string/bloodbank_list"/>
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"/>
+
+</menu>

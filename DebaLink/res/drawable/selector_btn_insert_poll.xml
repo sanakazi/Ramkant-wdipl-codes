@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_selected="true" android:drawable="@drawable/ckb_seleted_poll" />
+	<item android:state_pressed="true" android:drawable="@drawable/ckb_seleted_poll" />
+	<item android:drawable="@drawable/ckb_empty_poll" />
+</selector>

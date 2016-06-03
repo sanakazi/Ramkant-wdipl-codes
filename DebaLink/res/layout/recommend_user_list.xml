@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <com.debalink.customviews.CustomEditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search"
+        android:ems="10"
+        android:hint="Search name"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp" >
+    </com.debalink.customviews.CustomEditText>
+
+    <ImageButton
+        android:id="@+id/btnRecommended"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_recommend_post"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/edtSearch"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/lvUserList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnRecommended"
+        android:layout_marginTop="10dp" >
+    </ListView>
+
+</RelativeLayout>

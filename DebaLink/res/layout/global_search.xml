@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.debalink.customviews.CustomAutoCompleteTextView
+                android:id="@+id/edtSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search"
+                android:drawableRight="@drawable/ic_search_new"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="textFilter|textNoSuggestions|textVisiblePassword"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+            </com.debalink.customviews.CustomAutoCompleteTextView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="5dp" >
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="signup_edt_textsize">25sp</dimen>
+    <dimen name="signup_lable_margin">10dp</dimen>
+    <dimen name="signup_profile_pic_size">100dp</dimen>
+    <dimen name="signup_header_size">30dp</dimen>
+    <dimen name="headline_row_data_text_size">30sp</dimen>
+    <dimen name="headline_sub_data_text_size">24sp</dimen>
+    <dimen name="grid_data_text_size">25sp</dimen>
+    <dimen name="headline_row_name_text_size">22sp</dimen>
+    <dimen name="headline_row_subtext_text_size">20sp</dimen>
+    <dimen name="publication_row_comment_text_size">14sp</dimen>
+    <dimen name="headline_row_date_text_size">16sp</dimen>
+
+</resources>

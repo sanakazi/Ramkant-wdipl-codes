@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.70"
+            android:gravity="top"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtHeadlineDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:lines="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/headline_row_subtext_text_size" />
+
+            <TextView
+                android:id="@+id/txtDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:lines="1"
+                android:textColor="#010101"
+                android:textSize="@dimen/headline_row_date_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.30"
+            android:layout_marginTop="5dp"
+            android:gravity="bottom|left"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtAddedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="dsfsdaf"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/headline_row_date_text_size" />
+
+            <TextView
+                android:id="@+id/txtAddedByName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="dsfsdaf"
+                android:textColor="#9d1214"
+                android:textSize="@dimen/headline_row_subtext_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="0.40" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1" >
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.10"
+                android:background="@android:color/transparent"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_comments" />
+
+            <TextView
+                android:id="@+id/txtNoOfComments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.10"
+                android:text="10"
+                android:textColor="#1a6ad0"
+                android:textSize="@dimen/publication_row_comment_text_size" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.10"
+                android:background="@android:color/transparent"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_view" />
+
+            <TextView
+                android:id="@+id/txtViews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.15"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="@dimen/publication_row_comment_text_size" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.10"
+                android:background="@android:color/transparent"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_cat" />
+
+            <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.34"
+                android:lines="1"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="@dimen/publication_row_comment_text_size" />
+            
+            <ImageButton
+                android:id="@+id/btnLockKey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.10"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                android:src="@drawable/ic_lock_key" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

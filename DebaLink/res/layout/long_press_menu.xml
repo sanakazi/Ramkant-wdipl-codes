@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/btnRecommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_btn_popup_recomended" />
+
+    <ImageButton
+        android:id="@+id/btnPinsafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRecommend"
+        android:layout_toLeftOf="@+id/btn"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_btn_popup_pinsafe" />
+    
+    <ImageButton
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnRecommend"
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        android:src="@drawable/popup_invisible" />
+
+    <ImageButton
+        android:id="@+id/btnReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPinsafe"
+       
+        android:layout_below="@+id/btnPinsafe"
+        android:background="@android:color/transparent"
+        android:src="@drawable/selector_btn_popup_flag" />
+
+    <ImageButton
+        android:id="@+id/btnComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/btnReport"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/selector_btn_popup_comments" />
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/btnBullet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/new_mail_bullet" />
+
+            <CheckBox
+                android:id="@+id/ckbSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_checkbox"
+                android:button="@drawable/selector_checkbox"
+                android:gravity="center"
+                android:padding="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="Large"
+                android:textColor="#9d1214"
+                android:textSize="@dimen/headline_row_name_text_size" />
+
+            <TextView
+                android:id="@+id/txtSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="Large"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/headline_row_subtext_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="4"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/headline_row_date_text_size" />
+
+        <Button
+            android:id="@+id/btnView"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="View"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

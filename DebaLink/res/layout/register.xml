@@ -1,0 +1,362 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity" >
+
+    <include
+        android:id="@+id/lytHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lytHeader"
+        android:layout_marginLeft="@dimen/signup_lable_margin"
+        android:layout_marginRight="@dimen/signup_lable_margin"
+        android:orientation="vertical" >
+
+        <!-- name layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_name"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:maxLength="35"
+                android:singleLine="true"
+                android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM,_,-, " 
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- gender layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_gender"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_male" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_female" />
+                
+                <RadioButton
+                    android:id="@+id/rbUnspecified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_unspecified" 
+                    android:checked="true"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- date of birth layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtDOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_date_of_birth"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtDOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/btnDOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.20"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:inputType="text"
+                android:scaleType="fitStart"
+                android:src="@android:drawable/ic_menu_my_calendar" >
+            </ImageButton>
+        </LinearLayout>
+
+        <!-- username layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_username"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM,_,-" 
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- password layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_password"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- confirm password layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_confirm_password"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- profile picture layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtProfilePicture"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_profile_pic"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <ImageView
+                android:id="@+id/imgProfilePicture"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/signup_profile_pic_size"
+                android:layout_weight="0.20"
+                android:ems="10"
+                android:maxWidth="@dimen/signup_profile_pic_size"
+                android:scaleType="fitStart"
+                
+                android:textSize="@dimen/signup_edt_textsize" >
+            </ImageView>
+
+            <ImageButton
+                android:id="@+id/btnProfilePicture"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.20"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:inputType="text"
+                android:scaleType="fitStart"
+                android:src="@android:drawable/ic_menu_gallery" >
+            </ImageButton>
+            
+            <ImageButton
+                android:id="@+id/btnCamera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.20"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:inputType="text"
+                android:scaleType="fitStart"
+                android:src="@android:drawable/ic_menu_camera" >
+            </ImageButton>
+        </LinearLayout>
+
+        <!-- email id layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtEmailId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_emailid"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtEmailId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- confirm email id layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/txtConfirmEmailId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:text="@string/txt_confirm_emailid"
+                android:textSize="@dimen/signup_edt_textsize" />
+
+            <EditText
+                android:id="@+id/edtConfirmEmailId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="@dimen/signup_edt_textsize" >
+            </EditText>
+        </LinearLayout>
+
+        <!-- sign up button layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textSize="@dimen/signup_edt_textsize"
+                android:text="Sign Up" />
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:ems="10"
+                android:textSize="@dimen/signup_edt_textsize"
+                android:text="Sign In" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

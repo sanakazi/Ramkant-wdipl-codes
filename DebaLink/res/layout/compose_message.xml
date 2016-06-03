@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin" >
+
+    <RelativeLayout
+        android:id="@+id/llTo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6e6e6"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/llTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/txtTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="To:"
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/headline_row_data_text_size" />
+
+            <AutoCompleteTextView
+                android:id="@+id/edtTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:lines="1"
+                android:padding="10dp"
+                 android:hint="To:"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/headline_sub_data_text_size" >
+            </AutoCompleteTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llTo"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/txtSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Subject:"
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/headline_row_data_text_size" />
+
+            <EditText
+                android:id="@+id/edtSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:lines="1"
+                android:padding="10dp"
+                android:hint="Subject:"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/headline_sub_data_text_size" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llSubject"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/signup_edt_textsize"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Tap here to write..."
+                android:maxLines="12"
+                android:minLines="12"
+                android:padding="10dp"
+                android:textSize="@dimen/headline_sub_data_text_size" >
+            </EditText>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/llSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/llComments"
+            android:layout_alignRight="@+id/llComments"
+            android:layout_below="@+id/llComments"
+            android:layout_marginTop="10dp" >
+
+            <ImageButton
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/selector_btn_send_message"
+                 android:layout_centerInParent="true"
+                 
+                android:textSize="@dimen/signup_header_size" />
+
+            <ImageButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/selector_btn_cancel_message"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:textSize="@dimen/signup_header_size" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

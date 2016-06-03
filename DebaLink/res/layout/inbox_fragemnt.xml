@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/btnAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent"
+            android:text="All"
+            android:textColor="@drawable/selector_color_read"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent"
+            android:text="Read"
+            android:textColor="@drawable/selector_color_read"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+
+        <Button
+            android:id="@+id/btnUnread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent"
+            android:text="Unread"
+            android:textColor="@drawable/selector_color_read"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+
+        <Button
+            android:id="@+id/btnMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent"
+            android:text="  Mark"
+            android:textColor="@drawable/selector_color_read"
+            android:textSize="@dimen/headline_row_subtext_text_size" />
+    </LinearLayout>
+
+    <view
+        android:id="@+id/listViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll"
+        class="com.debalink.customviews.BackgroundContainer" >
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/list_divider" >
+        </ListView>
+    </view>
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listViewBackground"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ll"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_delete" />
+
+   
+
+</RelativeLayout>
